@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" id="site" class="nojs">
+<head>
+<!--[if lt IE 9]>
+<script src="static/js/vendor/html5shiv.js"></script>
+<![endif]-->
+
+    <title>Tangent House Styles</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="/static/dist/css/styles.min.css"/>
+    <link rel="stylesheet" media="screen and (min-width:0) and (max-width:767px)" href="/static/dist/css/styles-responsive.min.css"/>
+    <!--[if lt IE 8 ]>
+        <link rel="stylesheet" type="text/css" href="static/css/styles-responsive.css"/>
+    <![endif]-->
+
+    <script>
+        /* we want to remove the nojs class as soon as possible on page load */
+        document.getElementById("site").className = document.getElementById("site").className.replace(/nojs/i,'');
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+	<h2>Welcome to Jekyll!</h2>
+	<p class="meta">04 Aug 2015</p>
+
+	<a href="/blog.html">Back</a>
+
+	<div class="post">
+	<p>You’ll find this post in your <code>_posts</code> directory - edit this post and re-build (or run with the <code>-w</code> switch) to see your changes!
+To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention: YYYY-MM-DD-name-of-post.ext.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">&quot;Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span><span class="p">)</span>
+<span class="c1">#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span></code></pre></div>
+
+<p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/mojombo/jekyll">Jekyll’s GitHub repo</a>.</p>
+
+<p>Author: Andrew Sellick
+Github: andysellick </p>
+
+
+	</div>
+</div>
+
+    <!-- Grab Google-hosted jQuery. Fall back to locally saved file if necessary. -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.10.2.min.js">\x3C/script>')</script>
+    <!--[if lt IE 9 ]> 
+    <script>(function() {$('body').addClass('iex');})();</script>
+    <![endif]-->
+    <script src="/static/dist/js/main.min.js"></script>
+
+</body>
+</html>

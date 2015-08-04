@@ -112,7 +112,7 @@ gulp.task('watch', function() {
     gulp.watch(paths.styles.src + '*.less', ['styles']);
     gulp.watch(paths.scripts.src + '*.js', ['scripts']);
     gulp.watch(paths.images.src + '**/*', ['images']);
-    gulp.watch(['index.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
 });
 
 /* Clean up stray files */
