@@ -53,7 +53,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
  */
 
 gulp.task('deploy', ['jekyll-build'], function () {
-    return gulp.src(['./**/*', '!./node_modules/**/*'])
+    return gulp.src(['./**/*', '!./node_modules/**/*'], {dot:true})
         .pipe(plugins.ghPages({
             branch: 'master'
         }));
