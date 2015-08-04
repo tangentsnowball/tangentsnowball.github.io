@@ -52,8 +52,8 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
  * Deploy changes to Github/server
  */
 
-gulp.task("deploy", ["jekyll-build"], function () {
-    return gulp.src("./**/*")
+gulp.task('deploy', ['jekyll-build'], function () {
+    return gulp.src(['./**/*', '!./node_modules/**/*'])
         .pipe(plugins.ghPages({
             branch: 'master'
         }));
