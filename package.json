@@ -1,0 +1,34 @@
+{
+  "name": "tangentsnowball-github-gulp",
+  "version": "0.1.0",
+  "description": "Gulp capabilities for Tangent Snowballs Github page",
+  "author": "Ashley Firth <ashley.firth@tangentsnowball.com>",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tangentsnowball/tangentsnowball.github.io.git"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.8.0",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-cache": "^0.2.10",
+    "gulp-concat": "^2.6.0",
+    "gulp-gh-pages": "^0.5.2",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-less": "^3.0.3",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "jshint-stylish": "^1.0.1",
+    "path": "^0.11.14"
+  }
+}
