@@ -48,17 +48,6 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
     plugins.browserSync.reload();
 });
 
-/**
- * Deploy changes to Github/server
- */
-
-gulp.task('deploy', ['jekyll-build'], function () {
-    return gulp.src(['./**/*', '!./node_modules/**/*'], {dot:true})
-        .pipe(plugins.ghPages({
-            branch: 'master'
-        }));
-});
-
 /* CSS - LESS */
 function processCss(inputStream, taskType) {
     return inputStream
