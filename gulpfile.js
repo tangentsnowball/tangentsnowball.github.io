@@ -25,7 +25,12 @@ var gulp = require('gulp'),
     plugins = require('gulp-load-plugins')({
         pattern: '*',
         camelize: true
-    });
+    }),
+    copyFiles = {
+        styles: [
+            basePaths.src + 'css/font-awesome.min.css'
+        ]
+    };
 
 var cp = require('child_process');
 var messages = {
@@ -61,12 +66,22 @@ function processCss(inputStream, taskType) {
         .pipe(plugins.notify({ message: taskType + ' task complete' }));
 }
 
-gulp.task('styles', ['less:main', 'less:responsive']);
+gulp.task('styles', ['less:main', 'less:responsive', 'styles:moveFiles', 'fonts:moveFiles']);
 gulp.task('less:main', function() {
     return processCss(gulp.src(paths.styles.src + 'styles.less'), 'Styles');
 });
 gulp.task('less:responsive', function() {
     return processCss(gulp.src(paths.styles.src + 'styles-responsive.less'), 'Responsive styles');
+});
+gulp.task('styles:moveFiles', function() {
+    gulp.src(copyFiles.styles, { base: './static/css/' })
+    .pipe(gulp.dest(basePaths.src + 'dist/css/'))
+    .pipe(gulp.dest(basePaths.dest + 'css/'));
+});
+gulp.task('fonts:moveFiles', function() {
+    gulp.src(basePaths.src + 'fonts/**/*', { base: './static/fonts/' })
+    .pipe(gulp.dest(basePaths.src + 'dist/fonts/'))
+    .pipe(gulp.dest(basePaths.dest + 'fonts/'));
 });
 
 /* JS */
@@ -96,7 +111,7 @@ gulp.task('images', function() {
 });
 
 /* BrowserSync */
-gulp.task('browser-sync', ['styles', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['styles', 'scripts', 'images', 'jekyll-build'], function() {
     plugins.browserSync({
         server: {
             baseDir: '_site'
@@ -112,7 +127,7 @@ gulp.task('watch', function() {
     gulp.watch(paths.styles.src + '*.less', ['styles']);
     gulp.watch(paths.scripts.src + '*.js', ['scripts']);
     gulp.watch(paths.images.src + '**/*', ['images']);
-    gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
 });
 
 /* Clean up stray files */

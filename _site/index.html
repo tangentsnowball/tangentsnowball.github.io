@@ -9,6 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1.0">
 
+    <link rel="stylesheet" href="/static/dist/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/static/dist/css/styles.min.css"/>
     <link rel="stylesheet" media="screen and (min-width:0) and (max-width:767px)" href="/static/dist/css/styles-responsive.min.css"/>
     <!--[if lt IE 8 ]>
@@ -23,18 +24,69 @@
 
 <body>
 
-        <div class="container">
-        <h1>You're good to go buddy!</h1>
-        <p>If you're seeing this and running grunt, your server should be running on localhost:3000</p>
-        <br/>
-        <p>There is a bare-bones page to get your started at <code>/blank.html</code> and the styleguide is at <code>/_styleguide.html</code></p>
+<div class="mainmenu nav-toggle"></div>
 
-        <a href="blog.html">Blog</a>
+<button class="toggle nav-toggle">
+    <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96">
+      <rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect>
+    </svg>
+    <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96">
+      <rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect>
+    </svg>
+  </button>
 
-        <script src="https://gist.github.com/44c5321f48e4b828ac70.js"> </script>
-    </div>
+<div class="menu closed">
+    <ul>
+      <li>
+        <a href="index.html">
+      	 Home
+        </a>
+      	<span class="bar"></span>
+      </li>
+      <li>
+        <a href="tools.html">
+      	 Tools
+        </a>
+      	<span class="bar"></span>
+      </li>
+      <li>
+        <a href="approach.html">
+      	 Approach
+        </a>
+      	<span class="bar"></span>
+      </li>
+      <li>
+        <a href="team.html">
+      	 Team
+        </a>
+      	<span class="bar"></span>
+      </li>
+      <li>
+        <a href="work.html">
+      	 Work
+        </a>
+      	<span class="bar"></span>
+      </li>
+      <li>
+        <a href="news.html">
+         News
+        </a>
+        <span class="bar"></span>
+      </li>
+    </ul>
+</div>
+
+<div class="container">
+  <div class="logo-wrap align-center">
+	<h1 class="logo">Tangent Snowball</h1>
+</div>
+<p>This site is designed to provide an overview of Tangent Snowballs Front-End development department.</p>
+<p>It will introduce our best practices, current stack, the developers, and recent work &amp; updates.</p>
+
+<!-- <script src="https://gist.github.com/44c5321f48e4b828ac70.js"> </script> -->
 
 
+</div>
 
     <!-- Grab Google-hosted jQuery. Fall back to locally saved file if necessary. -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

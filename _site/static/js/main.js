@@ -92,4 +92,14 @@ $(function() {
         }
     }
 
+    /* Menu overlay */
+
+    $( '.nav-toggle' ).click(function() {
+      $('.menu').toggleClass('closed');
+      $('.nav-toggle').toggleClass('closed');
+      $('.content').toggleClass('closed');
+      $('#wrapper').toggleClass('closed');
+    });
+
 });
+

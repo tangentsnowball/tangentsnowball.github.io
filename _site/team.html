@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" id="site" class="nojs">
+<head>
+<!--[if lt IE 9]>
+<script src="static/js/vendor/html5shiv.js"></script>
+<![endif]-->
+
+    <title>Tangent House Styles</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/dist/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/dist/css/styles.min.css"/>
+    <link rel="stylesheet" media="screen and (min-width:0) and (max-width:767px)" href="/static/dist/css/styles-responsive.min.css"/>
+    <!--[if lt IE 8 ]>
+        <link rel="stylesheet" type="text/css" href="static/css/styles-responsive.css"/>
+    <![endif]-->
+
+    <script>
+        /* we want to remove the nojs class as soon as possible on page load */
+        document.getElementById("site").className = document.getElementById("site").className.replace(/nojs/i,'');
+    </script>
+</head>
+
+<body>
+
+<div class="mainmenu nav-toggle"></div>
+
+<button class="toggle nav-toggle">
+    <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96">
+      <rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect>
+    </svg>
+    <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96">
+      <rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect>
+    </svg>
+  </button>
+
+<div class="menu closed">
+    <ul>
+      <li>
+        <a href="index.html">
+      	 Home
+        </a>
+      	<span class="bar"></span>
+      </li>
+      <li>
+        <a href="tools.html">
+      	 Tools
+        </a>
+      	<span class="bar"></span>
+      </li>
+      <li>
+        <a href="approach.html">
+      	 Approach
+        </a>
+      	<span class="bar"></span>
+      </li>
+      <li>
+        <a href="team.html">
+      	 Team
+        </a>
+      	<span class="bar"></span>
+      </li>
+      <li>
+        <a href="work.html">
+      	 Work
+        </a>
+      	<span class="bar"></span>
+      </li>
+      <li>
+        <a href="news.html">
+         News
+        </a>
+        <span class="bar"></span>
+      </li>
+    </ul>
+</div>
+
+<div class="container">
+  <h1>Team</h1>
+
+
+<div class="circular-menu">
+
+  <div class="circle">
+    <a href="" class="fa fa-home fa-2x"></a>
+    <a href="" class="fa fa-facebook fa-2x"></a>
+    <a href="" class="fa fa-twitter fa-2x"></a>
+    <a href="" class="fa fa-linkedin fa-2x"></a>
+    <a href="" class="fa fa-github fa-2x"></a>
+    <a href="" class="fa fa-pinterest fa-2x"></a>
+    <a href="" class="fa fa-asterisk fa-2x"></a>
+  </div>
+  
+  <a href="" class="menu-button">
+  	<img src="https://github.com/MrFirthy.png" alt="">
+  </a>
+
+</div>
+
+<script>
+	var items = document.querySelectorAll('.circle a');
+	for(var i = 0, l = items.length; i < l; i++) {
+	  items[i].style.left = (50 - 30*Math.cos(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + '%';
+	  items[i].style.top = (50 + 30*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + '%';
+	}
+
+	document.querySelector('.menu-button').onclick = function(e) {
+	   e.preventDefault(); document.querySelector('.circle').classList.toggle('open');
+	}
+</script>
+</div>
+
+    <!-- Grab Google-hosted jQuery. Fall back to locally saved file if necessary. -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.10.2.min.js">\x3C/script>')</script>
+    <!--[if lt IE 9 ]> 
+    <script>(function() {$('body').addClass('iex');})();</script>
+    <![endif]-->
+    <script src="/static/dist/js/main.min.js"></script>
+
+</body>
+</html>

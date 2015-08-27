@@ -5,7 +5,12 @@
         display:block;
         margin:0 0 0.5em 0;
         padding:0;
-        font-weight:normal;
+        .font-brandon-bold;
+        font-weight:bold;
+
+        .bold {
+            font-weight: bold;
+        }
     }
     h1,
     .faux_h1 {
@@ -49,12 +54,39 @@
     }
     hr {
         height:1px;
-        margin:0 0 0.5em 0;
+        margin: 1.5em 0;
         border:0;
-        border-top:solid 1px #E7E7E7;
+        border-top:solid 1px #FFF;
         clear:both;
+
+        &.margin-sm {
+            margin: 0.5em 0;
+        }
     }
     code {
         padding:0 0.3em;
         font-size:1.2em;
+    }
+    .small {font-size: 80%;}
+
+
+    /* FONT */
+
+    @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=f459cc0f-9c17-4bac-9c10-a583d8b69eaf");
+    @font-face{
+        font-family:"Brandon Text W01 Regular";
+        src:url("../fonts/brandon/e416bea9-ae84-4323-b9f2-298c13bd7b0a.eot?#iefix");
+        src:url("../fonts/brandon/e416bea9-ae84-4323-b9f2-298c13bd7b0a.eot?#iefix") format("eot"),url("../fonts/brandon/641c334a-4247-47ff-afdd-8a7dadb13595.woff2") format("woff2"),url("../fonts/brandon/98af37a8-b4d4-4d22-a013-32f3041ec1bb.woff") format("woff"),url("../fonts/brandon/679da323-4b66-47ac-9819-d48272e64833.ttf") format("truetype"),url("../fonts/brandon/760535fc-04e3-4e76-8e8e-064fa58cb3b8.svg#760535fc-04e3-4e76-8e8e-064fa58cb3b8") format("svg");
+    }
+    @font-face{
+        font-family:"Brandon Text W01 Bold";
+        src:url("../fonts/brandon/aad9c5a7-1530-43c7-8365-e733bb3a4c6b.eot?#iefix");
+        src:url("../fonts/brandon/Fonts/aad9c5a7-1530-43c7-8365-e733bb3a4c6b.eot?#iefix") format("eot"),url("../fonts/brandon/9e44481d-0ce3-4208-a376-bdc2ff9bc671.woff2") format("woff2"),url("../fonts/brandon/8685ba95-06b4-4353-aae3-c849f7671452.woff") format("woff"),url("../fonts/brandon/cd7a4c71-905d-4f4f-84c5-dfa517e30711.ttf") format("truetype"),url("../fonts/brandon/5fc00f46-e402-4d59-9c9d-6c21ee2b8167.svg#5fc00f46-e402-4d59-9c9d-6c21ee2b8167") format("svg");
+    }
+
+    .font-brandon {
+        font-family:"Brandon Text W01 Regular",Arial,sans-serif;
+    }
+    .font-brandon-bold {
+        font-family:"Brandon Text W01 Bold",Arial,sans-serif;
     }

@@ -2,3 +2,211 @@
 
     .nav {
     }
+
+    .menu {
+	  width: 250px;
+	  height: 100%;
+	  position: fixed;
+	  background-color: @pink;
+	  .transition(~"all 1s");
+	  left: 0;
+	  z-index: 50;
+	  overflow-y: auto;
+	  padding-bottom: 100px;
+	}
+
+	.menu.closed {
+	  left: -250px;
+	}
+
+	.mainmenu {
+	  background-color: @pink;
+	  height: 100%;
+	  min-height: 100%;
+	  width: 50px;
+	  position: fixed;
+	  top: 0;
+	  bottom: 0;
+	  left: 0px;
+	  z-index: 25;
+	  .transition(~"all .7s ease");
+	}
+	.mainmenu:hover {
+	  cursor: pointer;
+	}
+	.mainmenu.closed {
+	  left: 0px;
+	  top: 0;
+	  bottom: 0;
+	  right: 0;
+	  width: 100%;
+	  height: 100%;
+	  opacity: .3;
+	}
+
+	.content {
+	  width: 100%;
+	  height: 100%;
+	  margin-left: 0px;
+	  .transition(~"all .4s");
+	}
+
+	.content.closed .text {
+		.transform(~"translateX(80px)");
+	}
+
+	.text {
+	  width: 60%;
+	  margin: auto;
+	  .transition(~"all .4s ease");
+	  margin-top: 80px;
+	  margin-bottom: 80px;
+	}
+
+	.menu ul {
+	  .font-brandon;
+	  list-style-type: none;
+	  padding: 0;
+	  margin: 85px 0 0 40px;
+	  padding-right: 40px;
+	}
+
+	.menu ul li {
+	  color: floralwhite;
+	  font-size: 20px;
+	  margin: 0 0 5px 0;
+	  display: block;
+	  height: 40px;
+	  line-height: 40px;
+	  padding-left: 10px;
+	  .transition(~"all .3s");
+
+	  &:hover {
+	  	cursor: pointer;
+	  }
+	  a,
+	  a:hover {
+		color: #FFF;
+		text-decoration: none;
+	  }
+	}
+
+	#wrapper {
+	  height: 100%;
+	  min-height: 100%;
+	  position: fixed;
+	  overflow-y: auto;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	}
+	#wrapper.closed {
+	  position: fixed;
+	}
+
+
+
+	/* Burger icon with navigation */
+
+	.toggle {
+  	  padding: 0;
+	  margin: 0;
+	  border: 0;
+	  background-color: transparent;
+	  display: block;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  z-index: 55;
+	  height: 50px;
+	  width: 50px;
+	  outline: none;
+	  -moz-transition: -moz-transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+	  -o-transition: -o-transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+	  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+	  transition: transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+
+	  &:hover {
+	  	cursor: pointer;
+	  }
+	}
+
+	.gh-svg {
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  font-size: 18px;
+	  fill: #fff;
+	  -moz-transform: translateZ(0) rotate(0deg);
+	  -ms-transform: translateZ(0) rotate(0deg);
+	  -webkit-transform: translateZ(0) rotate(0deg);
+	  transform: translateZ(0) rotate(0deg);
+	  -moz-transition: -moz-transform 0.45s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+	  -o-transition: -o-transform 0.45s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+	  -webkit-transition: -webkit-transform 0.45s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+	  transition: transform 0.45s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+	}
+
+	.toggle .gh-svg-rect-top {
+	  -moz-transform: translate3d(0, -8px, 0);
+	  -webkit-transform: translate3d(0, -8px, 0);
+	  transform: translate3d(0, -8px, 0);
+	}
+
+	.toggle .gh-svg-rect-bottom {
+	  -moz-transform: translate3d(0, 8px, 0);
+	  -webkit-transform: translate3d(0, 8px, 0);
+	  transform: translate3d(0, 8px, 0);
+	}
+
+	.toggle.closed .gh-svg-top {
+	  -moz-transform: translateZ(0) rotate(135deg);
+	  -ms-transform: translateZ(0) rotate(135deg);
+	  -webkit-transform: translateZ(0) rotate(135deg);
+	  transform: translateZ(0) rotate(135deg);
+	}
+
+	.toggle.closed .gh-svg-bottom {
+	  -moz-transform: translateZ(0) rotate(-135deg);
+	  -ms-transform: translateZ(0) rotate(-135deg);
+	  -webkit-transform: translateZ(0) rotate(-135deg);
+	  transform: translateZ(0) rotate(-135deg);
+	}
+
+	.toggle.closed .gh-svg-rect-top, .toggle.closed .gh-svg-rect-bottom {
+	  -moz-transform: translate3d(0, 0, 0);
+	  -webkit-transform: translate3d(0, 0, 0);
+	  transform: translate3d(0, 0, 0);
+}
+
+
+
+	.bar { 
+		position:relative; 
+		display:block; 
+		width:100%; 
+	}
+	.bar:before, 
+	.bar:after {
+	  content:'';
+	  height:2px; 
+	  width:0;
+	  bottom:1px; 
+	  position:absolute;
+	  background:#FFF; 
+	  transition:0.2s ease all; 
+	  -moz-transition:0.2s ease all; 
+	  -webkit-transition:0.2s ease all;
+	}
+	.bar:before {
+	  left:50%;
+	}
+	.bar:after {
+	  right:50%; 
+	}
+
+	/* active state */
+	.menu ul li:hover .bar:before, .menu ul li:hover .bar:after {
+	  width:50%;
+	}

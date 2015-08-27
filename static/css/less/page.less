@@ -13,3 +13,108 @@
     main {
         
     }
+
+    @media (max-width: 1074px) {
+        .container {
+            padding: 0 10px 0 60px;
+        }
+    }
+
+    .logo {
+        display:inline-block;
+        width: 200px;
+        height: 200px;
+        vertical-align:middle;
+        background:url('../img/logo.png') no-repeat 0 0;
+        background-size: cover;
+        text-indent: -9999px;
+    }
+
+    /* Team page */
+
+    .circular-menu {
+      width: 100%;
+      max-width: 370px;
+      height: 370px;
+      margin: 0 auto;
+      position: relative;
+      font-family: FontAwesome;
+    }
+
+    .circle {
+      width: 100%;
+      max-width: 370px;
+      height: 370px;
+      opacity: 0;
+      .transform(~"scale(0)");
+      .transition(~"all 0.4s ease-out");
+    }
+
+    .open.circle {
+      opacity: 1;
+      .transform(~"scale(1)");
+    }
+
+    .circle a {
+      text-decoration: none;
+      color: @pink;
+      display: block;
+      height: 40px;
+      width: 40px;
+      line-height: 40px;
+      margin-left: -20px;
+      margin-top: -20px;
+      position: absolute;
+      text-align: center;
+
+    }
+
+    .circle a:hover {
+      color: darken(@pink, 20%);
+    }
+
+    .menu-button {
+        position: static;
+
+      img {
+        position: absolute;
+          top: calc(~"50% - 60px");
+          left: calc(~"50% - 60px");
+          text-decoration: none;
+          text-align: center;
+          color: #444;
+          border-radius: 50%;
+          display: block;
+          height: 120px;
+          width: 120px;
+          line-height: 100px;
+          border: 2px solid @pink;
+      }
+      &:hover {
+        
+        img {
+            -webkit-filter: blur(1px);
+            -moz-filter: blur(1px);
+            -o-filter: blur(1px);
+            -ms-filter: blur(1px);
+            filter: blur(1px);
+        }
+        &:before {
+            content: "\f1e0";
+            font-family: FontAwesome;
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            text-align: center;
+            top: calc(~"50% - 11px");
+            left: calc(~"50% - 16px");
+            color: #FFF;
+            font-size: 2.0em;
+            z-index: 10;
+        }
+      }
+    }
+
+    .menu-button:hover {
+
+    }
