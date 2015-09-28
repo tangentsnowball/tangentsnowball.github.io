@@ -2,7 +2,7 @@
 <html lang="en" id="site" class="nojs">
 <head>
 <!--[if lt IE 9]>
-<script src="static/js/vendor/html5shiv.js"></script>
+<script src="/static/dist/bower_components/html5shiv/dist/html5shiv.min.js"></script>
 <![endif]-->
 
     <title>Tangent House Styles</title>
@@ -67,53 +67,85 @@
         </a>
       	<span class="bar"></span>
       </li>
-      <li>
+      <!-- <li>
         <a href="news.html">
          News
         </a>
         <span class="bar"></span>
-      </li>
+      </li> -->
     </ul>
 </div>
 
 <div class="container">
-  <h1>Team</h1>
+  <h1 class="sub-title">Team</h1>
+
+<div class="row">
+	
+	<div class="span6">
+		<div class="circular-menu">
+
+			<div class="circle">
+				
+					<a href="http://mrfirthy.me" target="_blank" class="fa fa-home fa-2x"></a>
+				
+				
+					<a href="http://facebook.com/ashley.firth" target="_blank" class="fa fa-facebook fa-2x"></a>
+				
+				
+					<a href="http://twitter.com/MrFirthy" target="_blank" class="fa fa-twitter fa-2x"></a>
+				
+				<!-- <a href="" class="fa fa-linkedin fa-2x"></a> -->
+				
+					<a href="http://github.com/MrFirthy" target="_blank" class="fa fa-github fa-2x"></a>
+				
+				
+					<a href="mailto:ashley.firth@tangentsnowball.com" class="fa fa-envelope fa-2x"></a>
+				
+			<!-- <a href="" class="fa fa-pinterest fa-2x"></a> -->
+			<!-- <a href="" class="fa fa-asterisk fa-2x"></a> -->
+			</div>
+		  
+			<a href="" class="menu-button">
+				<img src="https://github.com/MrFirthy.png" alt="">
+			</a>
+
+			<p>Ashley Firth</p>
+		</div>
+	</div>
+	
+	<div class="span6">
+		<div class="circular-menu">
+
+			<div class="circle">
+				
+					<a href="http://custarddoughnuts.co.uk" target="_blank" class="fa fa-home fa-2x"></a>
+				
+				
+				
+				<!-- <a href="" class="fa fa-linkedin fa-2x"></a> -->
+				
+					<a href="http://github.com/andysellick" target="_blank" class="fa fa-github fa-2x"></a>
+				
+				
+			<!-- <a href="" class="fa fa-pinterest fa-2x"></a> -->
+			<!-- <a href="" class="fa fa-asterisk fa-2x"></a> -->
+			</div>
+		  
+			<a href="" class="menu-button">
+				<img src="https://github.com/andysellick.png" alt="">
+			</a>
+
+			<p>Andrew Sellick</p>
+		</div>
+	</div>
+	
+</div>
 
 
-<div class="circular-menu">
-
-  <div class="circle">
-    <a href="" class="fa fa-home fa-2x"></a>
-    <a href="" class="fa fa-facebook fa-2x"></a>
-    <a href="" class="fa fa-twitter fa-2x"></a>
-    <a href="" class="fa fa-linkedin fa-2x"></a>
-    <a href="" class="fa fa-github fa-2x"></a>
-    <a href="" class="fa fa-pinterest fa-2x"></a>
-    <a href="" class="fa fa-asterisk fa-2x"></a>
-  </div>
-  
-  <a href="" class="menu-button">
-  	<img src="https://github.com/MrFirthy.png" alt="">
-  </a>
 
 </div>
 
-<script>
-	var items = document.querySelectorAll('.circle a');
-	for(var i = 0, l = items.length; i < l; i++) {
-	  items[i].style.left = (50 - 30*Math.cos(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + '%';
-	  items[i].style.top = (50 + 30*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + '%';
-	}
-
-	document.querySelector('.menu-button').onclick = function(e) {
-	   e.preventDefault(); document.querySelector('.circle').classList.toggle('open');
-	}
-</script>
-</div>
-
-    <!-- Grab Google-hosted jQuery. Fall back to locally saved file if necessary. -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.10.2.min.js">\x3C/script>')</script>
+    <script src="/static/dist/bower_components/jquery/dist/jquery.min.js"></script>
     <!--[if lt IE 9 ]> 
     <script>(function() {$('body').addClass('iex');})();</script>
     <![endif]-->

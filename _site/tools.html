@@ -2,7 +2,7 @@
 <html lang="en" id="site" class="nojs">
 <head>
 <!--[if lt IE 9]>
-<script src="static/js/vendor/html5shiv.js"></script>
+<script src="/static/dist/bower_components/html5shiv/dist/html5shiv.min.js"></script>
 <![endif]-->
 
     <title>Tangent House Styles</title>
@@ -67,22 +67,47 @@
         </a>
       	<span class="bar"></span>
       </li>
-      <li>
+      <!-- <li>
         <a href="news.html">
          News
         </a>
         <span class="bar"></span>
-      </li>
+      </li> -->
     </ul>
 </div>
 
 <div class="container">
-  <h1>Tools</h1>
+  <h1 class="sub-title">Tools</h1>
+
+<div class="row margin-bottom-lg">
+	<div class="span4 align-center">
+		<img src="/static/dist/img/gulp.svg" class="svg svg-tools" alt="Gulp logo">
+	</div>
+	<div class="span4 align-center">
+		<img src="/static/dist/img/bower.svg" class="svg svg-tools" alt="Bower logo">
+	</div>
+	<div class="span4 align-center">
+		<img src="/static/dist/img/less.svg" class="svg svg-tools" alt="Less logo">
+	</div>
 </div>
 
-    <!-- Grab Google-hosted jQuery. Fall back to locally saved file if necessary. -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.10.2.min.js">\x3C/script>')</script>
+<div class="row text-with-hightlight">
+	<p>
+		Tangent's front end is constantly experimenting with new tools and approaches to improve our development process. The main tools we use across our projects our <span class="highlight-lg">Gulp</span>, <span class="highlight-lg">Bower</span> and <span class="highlight-lg">Less CSS</span>, and these act as a large part of the foundation of all our projects.
+	</p>
+	<p>
+		<span class="highlight-lg">Gulp</span> is our task runner of choice and is used to automate regular development tasks in order to save time and energy. Our standard installation handles tasks such as optimisation and minification of assets, linting and hinting, watching for changes to run tasks and a load more. It also comes complete with an installation of <span class="highlight-lg">Browser Sync</span> which enables instant refreshing on file saves, activity mirroring across browsers and, in our mind, is just about the greatest thing ever.
+	</p>
+	<p>
+		In our newer projects, we use <span class="highlight-lg">Bower</span> to manage our development dependencies. It helps us take care of third party code, it's dependencies and handling it's versions, and ensuring that it is optimised to reduce page load.
+	</p>
+	<p>
+		We use <span class="highlight-lg">LESS</span> as our CSS pre-processor and it is present in all of our projects. We make use of it's standard features for inheritance, mixins, variables and importing,and we've even taken advantage of LESS' looping abilities to create our own dynamic grid creator. For loops in CSS, crazy stuff.
+	</p>
+</div>
+</div>
+
+    <script src="/static/dist/bower_components/jquery/dist/jquery.min.js"></script>
     <!--[if lt IE 9 ]> 
     <script>(function() {$('body').addClass('iex');})();</script>
     <![endif]-->

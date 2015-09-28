@@ -3,7 +3,8 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2015-08-04 12:12:03
 categories: jekyll update
-author: Andy
+author: Andrew Sellick
+image: /my/image/path
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
@@ -24,7 +25,12 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 [jekyll-gh]: https://github.com/mojombo/jekyll
 [jekyll]:    http://jekyllrb.com
 
-{% assign author = site.data.members[page.author] %}
+{% for member in site.data.members %}
+	{% if member.name == page.author %}
+		{% assign author = member %}
+	{% endif %}
+{% endfor %}
+
 Author: {{ author.name }}
 Github: {{ author.github }} 
 

@@ -2,7 +2,7 @@
 <html lang="en" id="site" class="nojs">
 <head>
 <!--[if lt IE 9]>
-<script src="static/js/vendor/html5shiv.js"></script>
+<script src="/static/dist/bower_components/html5shiv/dist/html5shiv.min.js"></script>
 <![endif]-->
 
     <title>Tangent House Styles</title>
@@ -67,22 +67,81 @@
         </a>
       	<span class="bar"></span>
       </li>
-      <li>
+      <!-- <li>
         <a href="news.html">
          News
         </a>
         <span class="bar"></span>
-      </li>
+      </li> -->
     </ul>
 </div>
 
 <div class="container">
-  <h1>Work</h1>
+  <h1 class="sub-title">Work</h1>
+
+<h3>Recent case studies</h3>
+<p>
+	NAH 
+	Nails inc.
+	Styled by you
+	Sky business
+	Pub finder
+</p>
+
+<h3 class="margin-top-md">Recent plugins</h3>
+<div class="row margin-top-md">
+	<div class="span4 align-center">
+		<h4>Progress Tracker</h4>
+		<p class="small">A small (2KB) jQuery plugin that creates a fixed progress indicator based on your content and allows linking between them.</p>
+		<a href="https://github.com/MrFirthy/jquery-progresstracker" class="btn">Github</a> 
+	</div>
+	<div class="span4 align-center">
+		<h4>Circular Progress</h4>
+		<p class="small">A jQuery plugin to create, manipulate and animate a circular progress bar. Complete with public methods and callbacks</p>
+		<a href="https://github.com/andysellick/circular-progress" class="btn">Github</a> 
+	</div>
+	<div class="span4 align-center">
+		<h4>Autotext</h4>
+		<p class="small">Simple plugin to animate text being typed. Includes options to configure speed, deletion, deletion speed, cursor.</p>
+		<a href="https://github.com/andysellick/autotext" class="btn">Github</a> 
+	</div>
+</div>
+<div class="row">
+	<div class="span4 align-center">
+		<h4>Triangles</h4>
+		<p class="small">A plugin to create triangle based mouse trails on a page.</p>
+		<a href="https://github.com/andysellick/triangles" class="btn">Github</a> 
+	</div>
 </div>
 
-    <!-- Grab Google-hosted jQuery. Fall back to locally saved file if necessary. -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.10.2.min.js">\x3C/script>')</script>
+<h3 class="margin-top-md">Documentation</h3>
+<p>
+	For project specific information on setup, environments, and personnel we have a repository called Tangent Docs. Note: this is a private repository. You will only be able to access it if you are a Tangent Snowball employee. We also have a Confluence account that holds a lot of our documentation and useful information (speak to a Tangent Snowball to gain access to this).
+</p>
+
+<div class="row">
+	<div class="span3">
+		<a href="https://github.com/tangentlabs/tangent-docs" target="_blank" class="btn">
+			Tangent Docs
+		</a>
+	</div>
+</div>
+
+<h3 class="margin-top-md">Development</h3>
+<p>
+	We have a gallery site that holds all of our latest prototypes, experiments and general play things, to act as inspiration for our designers and UX engineers. It's called DevelopmenTS and you can check it out here:
+</p>
+
+<div class="row">
+	<div class="span3">
+		<a href="http://developments.tangentsnowball.com" target="_blank" class="btn">
+			DevelopmenTS
+		</a>
+	</div>
+</div>
+</div>
+
+    <script src="/static/dist/bower_components/jquery/dist/jquery.min.js"></script>
     <!--[if lt IE 9 ]> 
     <script>(function() {$('body').addClass('iex');})();</script>
     <![endif]-->

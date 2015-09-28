@@ -101,5 +101,29 @@ $(function() {
       $('#wrapper').toggleClass('closed');
     });
 
+    /* Team circles */
+    if($('.circle').length) {
+        $('.circle').each(function(index) {
+            var items = $(this).children();
+            for(var i = 0, l = items.length; i < l; i++) {
+                items[i].style.left = (50 - 30*Math.cos(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + '%';
+                items[i].style.top = (50 + 30*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + '%';
+            }
+        });
+
+        $('.menu-button').on('click', function(e) {
+            e.preventDefault();
+            $('.circle').not(this).removeClass('open');
+            $(this).prev('.circle').toggleClass('open');
+        });
+    }
+
+    $('a').on('click touchend', function(e) {
+        var el = $(this);
+        var link = el.attr('href');
+        if(link) {window.location = link;}
+    });
+
+
 });
 

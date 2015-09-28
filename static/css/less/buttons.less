@@ -1,6 +1,7 @@
 /* --buttons */
     /* button variables */
-    @btnhorzpadding: 0.5em; /* left and right padding for buttons */
+    @btnhorzpadding: 1.5em; /* left and right padding for buttons */
+    @btnvertpadding: 0.4em;
     @btnfontsize: 1em; /* button font size */
     @btnlineheight: 1.7em; /* used to control the vertical padding of buttons, should therefore be larger than btnfontsize */
 
@@ -21,22 +22,25 @@
     }
 
     .btn {
-        display:inline-block;
-        padding:0 @btnhorzpadding;
+        display:block;
+        padding:@btnvertpadding @btnhorzpadding;
         line-height:@btnlineheight;
-        margin:0;
+        margin:0 0 20px;
         .border-box();
-        border:solid 1px #AAA;
-        border:0;
-        background:#DDD;
-        color:#666;
+        border: 3px solid #fff;
+        .box-shadow(0 0 0 3px @pink);
+        .border-radius(1px);
+        background: @pink;
+        color:#FFF;
         outline:0;
         cursor:pointer;
         text-align:center;
         text-decoration:none;
         font-size:@btnfontsize;
         vertical-align:middle;
-        font-family:Arial,Helvetica;
+        .font-brandon;
+        .transition(~"all 0.3s ease-in-out");
+        .border-box;
         border-collapse:separate; //fix for IE9
         overflow:visible; //fix for IE7
 
@@ -51,6 +55,8 @@
 
         &:hover {
             text-decoration:none;
+            background: darken(@pink, 15%);
+            .box-shadow(0 0 0 3px darken(@pink, 15%));
         }
         &.btn-block {
             display:block;

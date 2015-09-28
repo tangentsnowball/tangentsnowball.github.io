@@ -20,6 +20,10 @@
         }
     }
 
+    .logo-wrap {
+        padding: 20px 0 0;
+    }
+
     .logo {
         display:inline-block;
         width: 200px;
@@ -28,6 +32,19 @@
         background:url('../img/logo.png') no-repeat 0 0;
         background-size: cover;
         text-indent: -9999px;
+        margin-bottom: 0;
+    }
+    .sub-logo {
+      color: @pink;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .logo-gulp,
+    .logo-less,
+    .logo-bower {
+      width: 100px;
+      height: 60px;
     }
 
     /* Team page */
@@ -39,6 +56,12 @@
       margin: 0 auto;
       position: relative;
       font-family: FontAwesome;
+
+      p {
+        .font-brandon-bold;
+        text-align: center;
+        margin-top: -50px;
+      }
     }
 
     .circle {
@@ -78,8 +101,8 @@
 
       img {
         position: absolute;
-          top: calc(~"50% - 60px");
-          left: calc(~"50% - 60px");
+          top: calc(~"50% - 62px");
+          left: calc(~"50% - 62px");
           text-decoration: none;
           text-align: center;
           color: #444;
@@ -118,3 +141,46 @@
     .menu-button:hover {
 
     }
+
+    .sub-title {
+      position: relative;
+      color: @pink;
+      line-height: 50px;
+      margin: 0 0 40px;
+      padding: 20px 0 0 60px;
+      .border-box;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        margin-top: 20px;
+        width: 50px;
+        height: 50px;
+        background-image: url('../img/logo.png');
+        background-size: 100% 100%;
+      }
+    }
+
+    .highlight-lg {
+      color: @pink;
+      .font-brandon-bold;
+      font-size: 1.6em;
+    }
+
+    .text-with-hightlight {
+
+      p {
+        padding-bottom: 1.25em;
+      }
+    }
+
+    .btn-cta {
+      [class*="span"] {
+        padding: 0 20px;
+        .border-box;
+      }
+    }
+

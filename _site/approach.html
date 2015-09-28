@@ -2,7 +2,7 @@
 <html lang="en" id="site" class="nojs">
 <head>
 <!--[if lt IE 9]>
-<script src="static/js/vendor/html5shiv.js"></script>
+<script src="/static/dist/bower_components/html5shiv/dist/html5shiv.min.js"></script>
 <![endif]-->
 
     <title>Tangent House Styles</title>
@@ -67,22 +67,54 @@
         </a>
       	<span class="bar"></span>
       </li>
-      <li>
+      <!-- <li>
         <a href="news.html">
          News
         </a>
         <span class="bar"></span>
-      </li>
+      </li> -->
     </ul>
 </div>
 
 <div class="container">
-  <h1>Approach</h1>
+  <h1 class="sub-title">Approach</h1>
+
+<blockquote>
+	<p>
+		"Everyone is happier when the code we interact with is clean and consistant. Even if it doesn't match your own style perfectly, consistency is the most important thing."
+	</p>
+	<cite>Chris Coyier</cite>
+</blockquote>
+
+<div class="margin-top-lg margin-bottom-lg">
+	<p>
+		At Tangent Snowball we strive for consistency above everything else. Although our approach, tools and best practice are constantly evolving, we develop with some core values in mind to ensure that we can easily hand off and pick up each other's code.
+	</p>
+	<p>
+		Below are the guides we use for formatting and writing our HTML, CSS and JavaScript.
+	</p>
 </div>
 
-    <!-- Grab Google-hosted jQuery. Fall back to locally saved file if necessary. -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="static/js/vendor/jquery-1.10.2.min.js">\x3C/script>')</script>
+<div class="row btn-cta">
+	<div class="span4 align-center">
+		<a href="https://github.com/tangentsnowball/style-guides/blob/master/html.md" class="btn">
+			HTML
+		</a>
+	</div>
+	<div class="span4 align-center">
+		<a href="https://github.com/tangentsnowball/style-guides/blob/master/css.md" class="btn">
+			CSS
+		</a>
+	</div>
+	<div class="span4 align-center">
+		<a href="https://github.com/tangentsnowball/style-guides/blob/master/javascript.md" class="btn">
+			JS
+		</a>
+	</div>
+</div>
+</div>
+
+    <script src="/static/dist/bower_components/jquery/dist/jquery.min.js"></script>
     <!--[if lt IE 9 ]> 
     <script>(function() {$('body').addClass('iex');})();</script>
     <![endif]-->
